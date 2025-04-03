@@ -1,19 +1,33 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "baseUrl": "./",
-    "moduleResolution": "node",
-    "paths": {
-      "@/*": [
-        "src/*"
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "esnext",
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"],
+        "~/*": ["./*"]
+      },
+      "jsx": "preserve",
+      "moduleResolution": "node",
+      "allowJs": true,
+      "checkJs": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "strict": false,
+      "noImplicitAny": false,
+      "lib": [
+        "esnext",
+        "dom",
+        "dom.iterable",
+        "scripthost"
       ]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
+    "include": [
+      "src/**/*",
+      "public/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist"
     ]
   }
-}
